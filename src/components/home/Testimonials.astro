@@ -1,25 +1,19 @@
 ---
 const testimonials = [
   {
-    name: 'Rebecca Hayes',
-    description: 'Designer',
-    image: '/assets/testimonial-1.webp',
+    name: 'Aaron Gould',
     message:
-      '“Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis.”',
+      '“Absolute pros from the very first phone call. Went way beyond what I expected, and we’re in and out really quickly. Can’t recommend these guys enough, they did an amazing job and were a pleasure to deal with. So happy I found them. I’m always hesitant to hire people because you never know what you’re going to get, but I have zero regrets hiring them, even though it was a relatively small job for them, they treated me right and for a great price as well. Thanks again guys!”',
   },
   {
-    name: 'Rosa Spencer',
-    description: 'Team Leader',
-    image: '/assets/testimonial-2.webp',
+    name: 'Benjamin Moore',
     message:
-      '“Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis.”',
+      '“Mitch and his guys were quick, professional, and fun to be around while they were working. They easily removed tons (literally) of broken, sunken and cracked concrete around my building in Detroit. I’d recommend them to friends and family without hesitation...”',
   },
   {
-    name: 'Christina Upton',
-    description: 'Manager',
-    image: '/assets/testimonial-3.webp',
+    name: 'Greg Messenger',
     message:
-      '“Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis.”',
+      "“We were working out of town on a concrete project. We had another company lined up for a week to haul some concrete away for us. Working two hours away on a very fast pace project it really put us in a bind when the other company didn't show up. I had my secretary do a Google search and found Mitch. He was at our site within an hour. He went out of his way which really meant a lot considering we are from out of town and a competing in his area. He put faith in us for payment as he wasn't able to accept cc. When he arrived he went above and beyond and loaded it himself with his own equipment which was not part of the deal. This is the first review I have ever wrote but he really deserved it. Great guy with nice equipment!”",
   },
 ];
 ---
@@ -28,10 +22,10 @@ const testimonials = [
   <div class="v mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
     <div class="flex flex-col items-center gap-12 lg:gap-20">
       <h2 class="mx-auto max-w-xl text-center text-3xl font-medium tracking-tight sm:text-4xl">
-        Trusted by the largest companies in the world
+        Trusted by the community
       </h2>
       <div
-        class="divide-primary-900/10 dark:divide-primary-300/10 grid divide-y lg:grid-cols-3 lg:divide-x lg:divide-y-0"
+        class="grid divide-y divide-primary-900/10 dark:divide-primary-300/10 lg:grid-cols-3 lg:divide-x lg:divide-y-0"
       >
         {
           testimonials.map((testimonial) => (
@@ -39,7 +33,7 @@ const testimonials = [
               <div class="flex flex-row gap-2">
                 {[...Array(3)].map(() => (
                   <svg
-                    class="text-primary-600 dark:text-primary-400 h-6 w-6"
+                    class="h-6 w-6 text-primary-600 dark:text-primary-400"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="currentColor"
@@ -49,22 +43,23 @@ const testimonials = [
                   </svg>
                 ))}
               </div>
-              <blockquote class="text-primary-950/70 dark:text-primary-200/70 text-center text-lg italic leading-loose">
+              <blockquote class="text-center text-lg italic leading-loose text-primary-950/70 dark:text-primary-200/70">
                 <p>{testimonial.message}</p>
               </blockquote>
               <figcaption class="flex flex-col gap-4">
-                <img class="mx-auto h-8 w-8 rounded-full" src={testimonial.image} alt="" />
                 <div class="text-center">
                   <div class="text-base font-medium">{testimonial.name}</div>
-                  <div class="text-primary-950/70 dark:text-primary-200/70 text-sm">
-                    {testimonial.description}
-                  </div>
                 </div>
               </figcaption>
             </figure>
           ))
         }
       </div>
+      <a
+        class="underline"
+        href="https://www.google.com/search?q=mitchco+construction&sourceid=chrome&ie=UTF-8#lrd=0x8824cf4234ffffff:0xe38f7afcb7a9faa6,1,,,,"
+        >View more</a
+      >
     </div>
   </div>
 </section>

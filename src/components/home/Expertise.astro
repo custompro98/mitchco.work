@@ -2,39 +2,27 @@
 const features = [
   {
     id: 'expertise-1',
-    name: 'Digital Experience Platforms',
+    name: 'Concrete and asphalt removal',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'MitchCo specializes in the removal of concrete, asphalt, and earth for builders, homeowners, and businesses across Metro Detroit. MitchCo will quickly and carefully remove parking lots, structures, porches, sidewalks, driveways, floors, pads, and foundations.',
   },
   {
     id: 'expertise-2',
-    name: 'Web & Mobile Development',
+    name: 'Material trucking',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'MitchCo will quickly bring materials to or from your job site or home. MitchCo trucks stone and earth among other materials so you can focus on building.',
   },
   {
     id: 'expertise-3',
-    name: 'Serverless Computing Platforms',
+    name: 'Snow services',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'Unlimited snow plowing included as part of your monthly contract with MitchCo. Rest assured snow will not get in the way of your business.',
   },
   {
     id: 'expertise-4',
-    name: 'Build & Test Automation Tools',
+    name: 'Salting',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-  },
-  {
-    id: 'expertise-5',
-    name: 'Artificial Intelligence',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-  },
-  {
-    id: 'expertise-6',
-    name: 'Full project support',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'Pay-as-you-go salt runs preventing slips, falls, and other hazards for you and your customers.',
   },
 ];
 ---
@@ -68,11 +56,11 @@ const features = [
                     aria-expanded="false"
                     x-bind:aria-expanded="isOpen.toString()"
                   >
-                    <div class="group-focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200 flex items-center justify-between rounded-3xl group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-offset-2">
+                    <div class="flex items-center justify-between rounded-3xl group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-offset-2 group-focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200">
                       <span class="font-medium">{feature.name}</span>
                       <span class="ml-6 flex h-7 items-center">
                         <svg
-                          class="text-primary-600 dark:text-primary-400 h-6 w-6 rotate-0 transform transition duration-200 ease-in-out"
+                          class="h-6 w-6 rotate-0 transform text-primary-600 transition duration-200 ease-in-out dark:text-primary-400"
                           x-bind:class="{ '-rotate-180': isOpen, 'rotate-0': !isOpen }"
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 24 24"
@@ -86,7 +74,7 @@ const features = [
                   </button>
                 </dt>
                 <dd class="pb-6 pr-6" id={feature.id} x-show="isOpen" x-cloak x-collapse>
-                  <p class="text-primary-950/70 dark:text-primary-200/70 text-base">
+                  <p class="text-base text-primary-950/70 dark:text-primary-200/70">
                     {feature.description}
                   </p>
                 </dd>

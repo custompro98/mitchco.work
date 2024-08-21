@@ -1,22 +1,19 @@
 ---
 const services = [
   {
-    step: '01',
-    name: 'Design',
+    name: 'Concrete removal',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'Breakout and disposal of existing concrete, asphalt, and earth for builders, homeowners, and businesses.',
   },
   {
-    step: '02',
-    name: 'Develop',
+    name: 'Material trucking',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'Transporation of stone, earth, and other materials to and from your job site, home, or business.',
   },
   {
-    step: '03',
-    name: 'Maintain',
+    name: 'Commercial snow removal',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'Unlimited snow plowing for a monthly fee with pay-as-you-go salt runs. Rest assured snow will not get in the way of your business.',
   },
 ];
 ---
@@ -28,11 +25,10 @@ const services = [
       <div class="grid gap-8 lg:grid-cols-3">
         {
           services.map((service) => (
-            <div class="bg-primary-500/10 dark:bg-primary-400/10 flex flex-col gap-12 rounded-3xl px-6 py-8">
-              <p class="text-sm">{service.step}</p>
+            <div class="flex flex-col gap-12 rounded-3xl bg-primary-500/10 px-6 py-8 dark:bg-primary-400/10">
               <div class="flex flex-col gap-4">
                 <h3 class="text-xl font-medium">{service.name}</h3>
-                <p class="text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg">
+                <p class="text-base text-primary-950/70 dark:text-primary-200/70 sm:text-lg">
                   {service.description}
                 </p>
               </div>
