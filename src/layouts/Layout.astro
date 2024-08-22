@@ -13,7 +13,7 @@ interface Props {
 const { description, title } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" x-cloak x-data :class="{ 'dark': $store.theme.isDark }">
   <head>
     <meta charset="utf-8" />
@@ -28,7 +28,7 @@ const { description, title } = Astro.props;
     <ViewTransitions />
   </head>
   <body
-    class="bg-primary-50 text-primary-950 dark:bg-primary-950 dark:text-primary-200 antialiased transition"
+    class="bg-primary-50 text-primary-950 antialiased transition dark:bg-primary-950 dark:text-primary-200"
   >
     <Header />
     <main>
@@ -44,11 +44,21 @@ const { description, title } = Astro.props;
       import Alpine from 'alpinejs';
       import collapse from '@alpinejs/collapse';
 
+      declare global {
+        interface Window {
+          Alpine: typeof Alpine;
+        }
+
+        interface XDataContext {
+          [stateKey: string]: any;
+        }
+      }
+
       Alpine.plugin(collapse);
 
       Alpine.store('theme', {
         init() {
-          this.isDark = (() => {
+          (this as XDataContext).isDark = (() => {
             if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
               return localStorage.getItem('theme') === 'dark';
             }
@@ -62,8 +72,8 @@ const { description, title } = Astro.props;
         isDark: false,
 
         toggle() {
-          this.isDark = !this.isDark;
-          localStorage.setItem('theme', this.isDark ? 'dark' : 'light');
+          (this as XDataContext).isDark = !(this as XDataContext).isDark;
+          localStorage.setItem('theme', (this as XDataContext).isDark ? 'dark' : 'light');
         },
       });
 
