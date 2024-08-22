@@ -4,16 +4,19 @@ const testimonials = [
     name: 'Aaron Gould',
     message:
       '“Absolute pros from the very first phone call. Went way beyond what I expected, and we’re in and out really quickly. Can’t recommend these guys enough, they did an amazing job and were a pleasure to deal with. So happy I found them. I’m always hesitant to hire people because you never know what you’re going to get, but I have zero regrets hiring them, even though it was a relatively small job for them, they treated me right and for a great price as well. Thanks again guys!”',
+    link: 'https://maps.app.goo.gl/BgUngW38ye7TxBzm8',
   },
   {
     name: 'Benjamin Moore',
     message:
       '“Mitch and his guys were quick, professional, and fun to be around while they were working. They easily removed tons (literally) of broken, sunken and cracked concrete around my building in Detroit. I’d recommend them to friends and family without hesitation...”',
+    link: 'https://maps.app.goo.gl/p43kYZT75U1e2Bq79',
   },
   {
     name: 'Greg Messenger',
     message:
       "“We were working out of town on a concrete project. We had another company lined up for a week to haul some concrete away for us. Working two hours away on a very fast pace project it really put us in a bind when the other company didn't show up. I had my secretary do a Google search and found Mitch. He was at our site within an hour. He went out of his way which really meant a lot considering we are from out of town and a competing in his area. He put faith in us for payment as he wasn't able to accept cc. When he arrived he went above and beyond and loaded it himself with his own equipment which was not part of the deal. This is the first review I have ever wrote but he really deserved it. Great guy with nice equipment!”",
+    link: 'https://maps.app.goo.gl/xnP2kiHeyr77LV8e8',
   },
 ];
 ---
@@ -48,7 +51,11 @@ const testimonials = [
               </blockquote>
               <figcaption class="flex flex-col gap-4">
                 <div class="text-center">
-                  <div class="text-base font-medium">{testimonial.name}</div>
+                  <div class="text-base font-medium">
+                    <a href={testimonial.link} class="underline">
+                      {testimonial.name}
+                    </a>
+                  </div>
                 </div>
               </figcaption>
             </figure>
@@ -57,7 +64,7 @@ const testimonials = [
       </div>
       <a
         class="underline"
-        href="https://www.google.com/search?q=mitchco+construction&sourceid=chrome&ie=UTF-8#lrd=0x8824cf4234ffffff:0xe38f7afcb7a9faa6,1,,,,"
+        href="https://www.google.com/maps/place/MitchCo+Concrete+Removal+and+Snow+Services/@42.5023896,-83.125993,17z/data=!4m14!1m5!8m4!1e1!2s103635544285227567235!3m1!1e1!3m7!1s0x8824cf4234ffffff:0xe38f7afcb7a9faa6!8m2!3d42.5023857!4d-83.1234181!9m1!1b1!16s%2Fg%2F1trxkxb5?hl=en-US&entry=ttu"
         >View more</a
       >
     </div>
